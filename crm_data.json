@@ -1,0 +1,62 @@
+{
+    "alex": {
+        "name": "Alex",
+        "preferences": "Affordable cars",
+        "purchase_history": ["Sedan in New York", "Hatchback in Florida"],
+        "last_interaction": "Interested in a used 2-door compact car"
+    },
+    "ryan": {
+        "name": "Ryan",
+        "preferences": "Luxury vehicles",
+        "purchase_history": ["Convertible in Miami"],
+        "last_interaction": "Looking for a high-end sports car"
+    },
+    "emma": {
+        "name": "Emma",
+        "preferences": "Family-friendly SUVs",
+        "purchase_history": ["SUV in Chicago"],
+        "last_interaction": "Searching for a spacious SUV with advanced safety features"
+    },
+    "jake": {
+        "name": "Jake",
+        "preferences": "Urban electric cars",
+        "purchase_history": ["Electric hatchback in San Francisco"],
+        "last_interaction": "Interested in a fully electric compact vehicle"
+    },
+    "sophia": {
+        "name": "Sophia",
+        "preferences": "Eco-friendly vehicles",
+        "purchase_history": ["Hybrid car in Seattle"],
+        "last_interaction": "Exploring hybrid and electric options"
+    },
+    "daniel": {
+        "name": "Daniel",
+        "preferences": "Investment in classic cars",
+        "purchase_history": ["Classic muscle car in Dallas"],
+        "last_interaction": "Inquiring about rare vintage models"
+    },
+    "mia": {
+        "name": "Mia",
+        "preferences": "Vacation cars",
+        "purchase_history": ["Off-road vehicle in the mountains"],
+        "last_interaction": "Looking for a recreational vehicle (RV) for road trips"
+    },
+    "liam": {
+        "name": "Liam",
+        "preferences": "Modern designs",
+        "purchase_history": ["Sports coupe in Austin"],
+        "last_interaction": "Interested in a newly released sports model"
+    },
+    "ava": {
+        "name": "Ava",
+        "preferences": "Pet-friendly cars",
+        "purchase_history": ["SUV in Denver"],
+        "last_interaction": "Searching for a vehicle with ample cargo space"
+    },
+    "noah": {
+        "name": "Noah",
+        "preferences": "Affordable cars",
+        "purchase_history": ["Compact car in Boston"],
+        "last_interaction": "Inquiring about financing options for first-time buyers"
+    }
+}
