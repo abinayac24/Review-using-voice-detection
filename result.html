@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result - Negotiation Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Analysis Result</h2>
+    <p><strong>Customer Query:</strong> {{ user_input }}</p>
+    <p><strong>Sentiment:</strong> {{ sentiment }} (Score: {{ sentiment_score }})</p>
+    <h3>Alexa's Response:</h3>
+    <p>{{ response }}</p>
+
+    <br><a href="/">⬅ Go Back</a>
+</body>
+</html>

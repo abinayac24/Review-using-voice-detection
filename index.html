@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Automotive Negotiation Coach</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 15px;
+    background:  #1e1e1e;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    outline: none;
+    background: #333;
+    color: #fff;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff5722;
+            background: #444;
+}
+
+.btn {
+    padding: 14px 24px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+            font-weight: 500;
+}
+
+.btn-primary {
+    background: #ff5722;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background: #616161;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #757575;
+            transform: translateY(-2px);
+}
+
+#recordButton {
+    background-color: #ff9800;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 24px;
+    border: none;
+    margin-right: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+#recordButton:hover {
+    transform: scale(1.1);
+}
+
+#recordButton.recording {
+    background: linear-gradient(135deg, #e53935, #d32f2f);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#results {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Automotive Negotiation Coach</h1>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="customer_name">Customer Name:</label>
+                <input type="text" id="customer_name" name="customer_name" placeholder="Enter customer name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="user_input">Your Message:</label>
+                <textarea id="user_input" name="user_input" rows="5" placeholder="Type your message here..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button type="button" id="recordButton" class="btn">🎙️</button>
+                <button type="button" id="stopButton" class="btn btn-secondary">Stop</button>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </form>
+        
+        <div id="results">
+            <div id="sentiment"></div>
+            <div id="response"></div>
+            <!-- <a href="/sentiment_graph" id="sentiment-graph-link">View Sentiment Graph</a> -->
+            <div style="margin-top: 20px;">
+                <a href="/sentiment_graph" class="btn btn-secondary">📈 View Sentiment Graph</a>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
